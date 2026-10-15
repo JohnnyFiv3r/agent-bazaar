@@ -51,6 +51,6 @@ with open(sys.argv[1]) as source:
 PY
 ```
 
-This verifies content integrity and authenticates every named walkthrough record relative to the keys declared by the fixture. Missing or empty proofs fail verification; deleting proof fields cannot downgrade a named record into an unsigned supporting document. It is not an external identity certification, semantic replay, independent interoperability test or proof of real-world capability. The scenario tests separately exercise qualification rejection, exact adoption, reporter separation, immutable provenance, replay and the performance condition.
+This verifies content integrity, requires every embedded content reference to resolve to exact bytes within the bundle, and authenticates every named walkthrough record relative to the keys declared by the fixture. Missing or empty proofs fail verification; deleting proof fields cannot downgrade a named record into an unsigned supporting document. It is not an external identity certification, semantic replay, independent interoperability test or proof of real-world capability. The scenario tests separately exercise qualification rejection, exact adoption, reporter separation, immutable provenance, replay and the performance condition.
 
 The example stops before the adapter boundary: **zero prepare, dispatch or reconcile calls**. The existing boundary contracts remain responsible for handoff eligibility; downstream validation, fulfillment, payment and settlement are not implemented here.

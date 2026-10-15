@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .crypto import Registry, canonical, check_ref, content_ref
 from .domain import ActionMeaning
+from .errors import ProtocolError
 from .fixtures import Environment, U
 from .guards import timestamp
 from .records import ref_key
@@ -349,7 +350,22 @@ def verify_trace(trace):
         objects[ref_key(item["ref"])] = item["value"]
 
     def resolve(ref):
-        return objects[ref_key(ref)]
+        try:
+            return objects[ref_key(ref)]
+        except KeyError as exc:
+            raise ProtocolError(
+                "evidence_unavailable", "trace content reference is unresolved"
+            ) from exc
+
+    def check_references(value):
+        if isinstance(value, dict):
+            if {"id", "digest"} <= value.keys() <= {"id", "digest", "locator"}:
+                check_ref(value, resolve(value))
+            for child in value.values():
+                check_references(child)
+        elif isinstance(value, list):
+            for child in value:
+                check_references(child)
 
     verified = set()
     for key, record in objects.items():
@@ -371,6 +387,11 @@ def verify_trace(trace):
             # also strips their protocol-identifying fields.
             registry.verify(record, resolve, trace["verification_time_ms"])
             verified.add(key)
+    # Check the exact references embedded in both signed records and supporting
+    # documents. A valid wrapper hash cannot replace bytes pinned by a signer.
+    # This traverses JSON content only; it neither fetches nor interprets terms.
+    for record in objects.values():
+        check_references(record)
     return {
         "content_objects": len(objects),
         "signed_records_verified": len(verified),

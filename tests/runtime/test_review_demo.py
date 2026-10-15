@@ -161,6 +161,33 @@ def test_portable_trace_verifies_without_ledger_and_detects_rehashed_tampering(
         verify_trace(altered)
 
 
+@pytest.mark.parametrize("target", ["review-semantics-v1", "source-access-lost"])
+@pytest.mark.parametrize("mutation", ["remove_document", "rehash_document"])
+def test_portable_trace_requires_exact_unsigned_content_referenced_by_signers(
+    tmp_path, target, mutation
+):
+    run_review_demo(tmp_path / "review")
+    trace = json.loads((tmp_path / "review" / "signed-trace.json").read_text())
+    item = next(
+        item for item in trace["objects"] if item["value"]["id"] == "fixture:" + target
+    )
+    if mutation == "remove_document":
+        trace["objects"].remove(item)
+    else:
+        if target == "review-semantics-v1":
+            item["value"]["actions"]["produce_report"] = "Different report terms"
+        else:
+            item["value"]["source_access_available"] = True
+        item["ref"] = content_ref(item["value"])
+    # The unsigned document's wrapper can change, but signed promises still pin
+    # its original content. Verifying signatures alone cannot detect its absence.
+    with pytest.raises(
+        ProtocolError, match="trace content reference is unresolved"
+    ) as exc:
+        verify_trace(trace)
+    assert exc.value.code == "evidence_unavailable"
+
+
 @pytest.mark.parametrize(
     "mutation", ["remove_proofs", "empty_proofs", "strip_protocol_fields"]
 )
