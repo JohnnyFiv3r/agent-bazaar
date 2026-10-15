@@ -129,11 +129,21 @@ def main(argv=None):
         type=Path,
         help="fresh output directory for durable SQLite scenario ledgers",
     )
+    review = subparsers.add_parser(
+        "review-demo", help="one bilateral semantic review with a portable signed trace"
+    )
+    review.add_argument("--directory", type=Path, help="fresh, empty output directory")
     args = parser.parse_args(argv)
     directory = args.directory or Path(
         tempfile.mkdtemp(prefix="agent-promise-protocol-demo-")
     )
-    print(json.dumps(run_demo(directory), indent=2))
+    if args.command == "review-demo":
+        from .review_demo import run_review_demo
+
+        result = run_review_demo(directory)
+    else:
+        result = run_demo(directory)
+    print(json.dumps(result, indent=2))
     return 0
 
 

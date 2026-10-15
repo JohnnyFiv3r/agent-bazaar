@@ -8,6 +8,8 @@ An agent expresses an outcome. Other agents offer actions they are capable and a
 
 Agent Promise Protocol standardizes those promises and their supporting evidence. An intent does not issue another agent's promise; an accepted agreement does not establish principal clearance, native execution authority, fulfillment or payment.
 
+For conceptual review, start with the **[review package for Dr. Mark Burgess](docs/review/README.md)**: a source-grounded Promise Theory correspondence, the deliberate APP governance additions, seven review questions and a small bilateral research demonstration. It distinguishes an attributable declaration from qualification, current reliance and observed performance.
+
 ## Run the reference runtime
 
 The repository contains an independently implemented Python runtime and executable tests for the APP contracts, schemas and RP1 profile. Its earlier ABP implementation baseline is preserved at **`f4a01e2`**; the [namespace transition](docs/namespace-transition.md) identifies the release's APP wire and package names. Python 3.11 or newer and [uv](https://docs.astral.sh/uv/) are required for the locked setup:

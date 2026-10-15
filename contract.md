@@ -24,11 +24,15 @@ An embedded buyer participant or a connector-accessed delegated participant uses
 
 The [deployment model](deployment-model.md) specifies the custody and role separation. A selected profile still supplies recoverable formation, conflict ordering and principal status. RP1's common conflict authority is one concrete preset, not a protocol-wide service; separate authoritative conflict domains require an understood mechanism rather than inference from separate local journals.
 
+Self-authorship, scoped allocation authority and actual performance remain distinct. Only an agent issues its own promise; its principal may authorize reliance on a selection or ordering authority within the adopted resource scope. Neither that authority nor the coordinator can compel the promised behavior. The protocol coordinates attributable commitments and decisions without treating delegated allocation as control over every autonomous act.
+
 ## 2. Promise and act semantics
 
-A promise is an agent's qualified action: the agent has the capability and delegated authority to perform the action within explicit conditions, limits and policy validity. Capability and authority are separate qualifications. A signature authenticates an assertion; it does not make a false capability assertion true.
+APP uses **qualified promise** for an agent's attributable promise of its own action, made within the capability and delegated authority required by its explicit conditions, limits and policy validity. The applicable guards require evidence for that action and stage. Capability and authority are separate substantive qualifications. A signature authenticates an assertion; it does not make a false capability assertion true. Rejecting an unqualified assertion for a dependent automatic APP act does not erase the historical fact that its author issued that assertion.
 
-An offer IS a promise. Issuing an offer adopts its author's identified conditional `own_promises`. There is no proposal-only offer that silently becomes a promise later. A request for counterpart behavior remains a request until the counterpart issues/adopts its own corresponding promise. Exact agreement selects the reciprocal terms and conditions on already qualified actions.
+An offer IS a promise. Offer issuance establishes its author's identified conditional `own_promises`; complete-candidate terms adoption is a separate act. There is no proposal-only offer that silently becomes a promise later. A request for counterpart behavior remains a request until the counterpart issues/adopts its own corresponding promise. Exact agreement selects the reciprocal terms and conditions on already qualified actions.
+
+The historical issuance, current qualification and reliance, observer trust and assessment of actual performance are separate. A conditional promise exists from issuance even while its future performance condition is unmet. Unknown meaning, an unsatisfied condition, revocation, withdrawal, principal refusal and observed nonperformance do not share a universal `broken` state. Each has its own subject, evidence and governing semantics; none silently rewrites the issued record. Observer trust cannot substitute for mandatory guards or erase adopted terms.
 
 An intent's `emission_promise` is scoped to the qualified act of declaring or seeking. It does not promise the desired outcome, buy a service, reserve capacity or issue anyone else's performance promise. Market posture, action type and provide/receive polarity remain independent. Either agent may seek a result or work, provide inputs, receive information, offer a service or coordinate when it is the originator.
 
@@ -101,6 +105,8 @@ The accepted object records agent agreement with initial status `pending_refusal
 The coordinator can record a counterparty adoption only with attributable evidence. Coordination grants no control over that party's behavior. Guarantees hold within conforming participants and their declared selection/ordering scope; the protocol cannot physically prevent a dishonest actor from issuing conflicting promises elsewhere.
 
 ## 9. Principal refusal after the agent handshake
+
+Protected principal refusal is APP's deliberate governance extension for delegated agency, not a theorem of Promise Theory or a universal property of promises. It remains a mandatory participation requirement: autonomy does not let negotiating agents waive their principals' adopted protections.
 
 Each relevant principal retains the right of refusal for the positive period fixed by its policy in the adopted terms. Neither agent can erase or shorten that period during finalization. It is separate from policy-defined offer or negotiation validity.
 

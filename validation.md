@@ -33,11 +33,14 @@ uv sync --locked --extra dev
 uv run --locked --extra dev python checks/validate.py
 uv run --locked --extra dev python -m pytest tests/runtime -q -ra
 uv run --locked agent-promise-protocol demo
+uv run --locked agent-promise-protocol review-demo
 uv lock --check
 uv build --wheel --sdist
 ```
 
 The demo creates a fresh temporary output directory by default. An explicit `--directory PATH` must name a fresh fixture directory. Its JSON output identifies controlled inputs and keeps agreement, principal recovery, dispatch and simulated native-call observations distinct. See [`demo.py`](src/agent_promise_protocol/demo.py) and the integrated CLI assertions in [`test_harness.py`](tests/runtime/test_harness.py).
+
+The narrower [`review-demo`](docs/review/worked-example.md) writes a readable summary and a portable signed trace for one conditional research offer and later observations. It makes no native adapter calls. Its offline verifier checks content and signatures against fixture-declared public keys; it is not independent interoperability, semantic replay or evidence of real research performance. The [conceptual review package](docs/review/README.md) separates these observations from questions about the theoretical model.
 
 The Python lockfile does not install OPA. The actual OPA integration requires the separately installed **1.21.1** executable at `.tools/opa`; its version is asserted by the test. When absent, that case is skipped and must not be counted as a successful OPA exercise. TLS tests require permission to bind local loopback sockets.
 
@@ -64,6 +67,7 @@ The [policy notes](policies/README.md) identify the tested executable provenance
 | [`test_composition.py`](tests/runtime/test_composition.py) | Acyclic plans, exact bindings, proof variants, required predicates, current status and stage-specific/transitive dependency clearance |
 | [`test_handoff.py`](tests/runtime/test_handoff.py) | Effect-free fake preparation, frozen native bytes, separate fresh native authority, durable markers, concurrent attempts, injected crash/reply-loss windows and read-only reconciliation |
 | [`test_harness.py`](tests/runtime/test_harness.py) | Integrated signed formation, operation replay/conflict, provenance, capacity, refusal/control authority, controlled composition/handoff and CLI observations |
+| [`test_review_demo.py`](tests/runtime/test_review_demo.py) | Controlled attribution-versus-qualification rejection, exact adoption, conditional performance gates, distinct performer/requester evidence, immutable originals, zero native calls and offline trace integrity |
 | [`test_deployment_portability.py`](tests/runtime/test_deployment_portability.py) | Separate keys, public-only peer enrollment and separate stores verify explicitly transported evidence; custody does not transfer authorship or install semantic state; incompatible authority scope blocks |
 | [`test_admission_scope.py`](tests/runtime/test_admission_scope.py) | Recipient/pool live-option accounting, pinned revisions, semantic failure, pending races, withdrawal and safe blocking of unresolved legacy accounting; not tenant access isolation |
 

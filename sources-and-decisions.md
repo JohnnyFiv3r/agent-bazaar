@@ -21,6 +21,8 @@ The book treats declared intention as a promise, distinguishes proposed descript
 
 The qualified-action wire model, budgeting, exact-term finalization and principal refusal window are APP engineering choices. The book does not prescribe these record types or lifecycle rules. Existing systems retain native authentication and downstream commerce functions.
 
+The October 15 [theory correspondence](docs/review/promise-theory-correspondence.md) rechecks the relevant definitions and their limits against this source. The [review package](docs/review/README.md) separates attributable declarations, policy-qualified reliance and observer assessment, and identifies principal recovery as a deliberate APP governance choice. Its [critique disposition](docs/review/critique-disposition.md) records the clarification without changing the frozen wire representation or relaxing admission guards.
+
 ## Native protocol sources and scope
 
 | Source | Use in draft 0.4 |

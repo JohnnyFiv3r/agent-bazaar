@@ -21,6 +21,8 @@ uv run --locked --extra dev python checks/validate.py
 
 The demo covers a bilateral agreement and guarded dispatch; refusal at the deadline followed by restart and replay; and three negotiating agents forming two bilateral agreements with a handoff dependency. It uses real signatures, hashes, schemas and durable local storage, with controlled capability/authority evidence, `TestPolicy`, `ControlledClock`, simulated inbox health and `FakeAdapter`. Its enrolled peer certificate identifiers are fixture values, not a live TLS exchange. The separate transport tests perform real mutual TLS.
 
+For a smaller conceptual walkthrough, run `uv run --locked agent-promise-protocol review-demo`. This [research example](review/worked-example.md) separates a conditional promise, exact adoption, principal clearance, a later provider inability report and a requester assessment. It exports a signed trace with public fixture keys and stops before native adapter preparation or dispatch.
+
 A fixture restart reopens the ledger while preserving that fixture's enrolled keys and fake native observations in the running test. A new process is not able to recover those private keys from the demo directory: the fixture does not write them there. Deployment key custody and enrollment persistence require separate configuration.
 
 The Python package can be built without OPA:
