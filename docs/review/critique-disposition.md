@@ -1,0 +1,25 @@
+# Disposition of the pre-review critique
+
+**October 15, 2026.** This records the response to the supplied critique, *Assessing Agent Commerce Readiness*, for a review of APP by Dr. Mark Burgess. It is a change rationale, not a conformance certificate or an endorsement by the book's authors.
+
+| Critique | Disposition | Result |
+|---|---|---|
+| A promise is described as if qualification established actual capability and successful performance. | Clarify the operational definition. | [Promise model](../../promise-model.md) and [C2](../../contracts/02-qualified-actions.md) distinguish attributable declaration, APP qualification, current reliance, performance and observer assessment. Existing qualification and authorization guards still apply. |
+| Capability requirements may be inconsistent with Promise Theory. | Qualify the criticism against the primary source. | The [correspondence note](promise-theory-correspondence.md) addresses the book's own capability constraint as well as its declared-intention and assessment concepts. We do not assume the theory treats capability as irrelevant or that APP's local evidence proves competence. |
+| Coordinator and shared authority may compromise autonomy. | Make the different authority scopes explicit. | Self-authorship, voluntarily selected resource/formation authority, and actual performance are separate. A coordinator cannot issue a peer's promise; recording an agreement cannot force fulfillment. The shared runtime arrangement remains disclosed. |
+| Conditional promises, validity, dependencies and refusal are conflated. | Separate their meanings and check stages. | The model and correspondence note explain what exists at issuance, what a future condition gates, and what withdrawal, refusal or a later assessment changes. No generic `broken` state is introduced. |
+| Principal refusal might belong only in a profile. | Retain the chosen core protection and expose the design question. | [C5](../../contracts/05-principal-refusal.md) identifies mandatory positive recovery as APP governance, not a theorem about promises. No zero-window shortcut or waiver is added. Question 6 in the [review cover](README.md#questions-for-dr-burgess) asks about scope and layering. |
+| The implementation is easier to inspect than its theoretical correspondence. | Add a focused correspondence document. | Named primary-source sections and page references, a mapping table, explicit engineering additions, limits and concrete counterexamples give the reviewer a bounded object to criticize. |
+| The demonstration is too broad and commerce-oriented. | Add one bilateral research illustration. | The [worked example](worked-example.md) separates intent, offer, exact adoption, principal clearance, provider inability and requester assessment. It generates authenticated evidence and performs no native operation. |
+| Independent participant evidence is incomplete. | Preserve this as an explicit remaining validation milestone. | Two controlled signer identities do not become two independent implementations. Neither the narrow demo nor separate-store record verification is described as independent formation or emergent coordination. |
+| Six focused research questions would make review productive. | Supply seven specific questions, including intent emission. | The [cover](README.md#questions-for-dr-burgess) asks about the central abstraction, autonomy, principals, conditionality, protected recovery and learned trust. |
+| Production commerce and application integration might delay review. | Keep them outside this update. | No retailer, sourcesQL, hosted marketplace, native checkout, payment or settlement implementation is required for the conceptual review. |
+| Subjective readiness percentages may summarize progress. | Do not adopt these as evidence. | The package uses named artifacts, measured test results and explicit untested claims. No percentage estimates are promoted to project status. |
+
+## Compatibility and intentional limits
+
+These clarifications preserve APP 0.4's required behavior. Qualified issuance still needs policy-acceptable evidence of capability and current authority; unknown required meanings still block automated acts; participants still adopt exact terms; principal protection remains mandatory. No schema, wire identifier, proof format, required feature or runtime admission/formation rule is changed by the prose clarification.
+
+The review demonstration uses the existing optional `lifecycle-evidence` feature and a local, explicitly controlled evidence vocabulary. Its reporting and assessment rules are application semantics, not a new APP action taxonomy or a universal fulfillment evaluator. The original agreement remains immutable when later observations are added.
+
+The published tag and historical evidence remain attributable to their original source. A substantive change recommended by Dr. Burgess would require an explicit design decision, compatibility analysis and, where semantics change, a new protocol/profile revision. This package identifies those questions rather than choosing a new governance model in anticipation of his answer.

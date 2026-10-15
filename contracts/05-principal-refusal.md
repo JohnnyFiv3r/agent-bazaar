@@ -6,6 +6,8 @@ This contract governs interpretation of the immutable `accepted_offer` produced 
 
 The accepted object records agent agreement. A separate current status establishes whether its adopted principal-refusal rules have been satisfied. Neither the object nor this status authorizes a downstream action or creates a human signature.
 
+The protected positive refusal period is a deliberate APP governance requirement for delegated agency. It is not derived as a theorem of Promise Theory and does not define promises generally. It remains mandatory in APP: a negotiating agent's autonomy does not authorize it to waive its principal's protection. A valid refusal changes permitted reliance on the accepted object while preserving the original promise records and agreement history.
+
 The selected refusal/status authority is scoped to the accepted object and its adopted policies; it need not be an APP-wide service or the custodian of every participant's journal. Independent ingress, hosting or replicas MUST preserve the profile's logical admission order and recovery guarantees. A participant's local copy, missing reply or elapsed local timer MUST NOT replace authenticated current authority evidence. A hosted assistant or connector MUST preserve the required principal notice/refusal and outcome-recovery paths across chat-session termination; ordinary negotiation authority cannot waive them. See the [deployment model](../deployment-model.md).
 
 ## C5.1 Adopted rights and authorized actors

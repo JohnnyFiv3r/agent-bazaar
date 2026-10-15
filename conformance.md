@@ -8,6 +8,8 @@ This is published as an **APP 0.4 Reference Draft** with an MIT reference runtim
 
 The normative requirements remain the [core contract](contract.md), [C1–C8](contracts/README.md), [RP1](profiles/reference-profile.md) and the frozen schemas. The implementation does not redefine a requirement when a test is easier to satisfy. An unsupported required meaning must block the act.
 
+The [conceptual review package](docs/review/README.md) separately examines the Promise Theory correspondence and APP's deliberate governance choices. Its signed bilateral example exercises existing mechanics under a test vocabulary; neither its results nor this conformance assessment establish theoretical endorsement.
+
 ## Scope of a claim
 
 A conformance claim must name the exact contract/profile revision, supported features, action/evidence vocabularies, authenticated identity/policy configuration, authority arrangement and external boundaries actually exercised. Schema validity, signature validity, current permission, exact adoption, principal clearance and native performance are separate observations.

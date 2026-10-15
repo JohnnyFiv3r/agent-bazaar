@@ -4,6 +4,8 @@
 
 This contract governs the meaning and authorship of an agent's promises. It implements the controlling [decisions](../decisions-v0.2.md) and refines the [promise model](../promise-model.md). Names such as `own_promise` and `promise_bindings` refer to the [record schema](../schemas/contract.schema.json). The [publication contract](01-publication-policy.md) governs permission and disclosure.
 
+The requirements below govern APP-qualified issuance and use. An attributable declaration can fail APP's qualification checks without ceasing to be evidence of what its author said. Such a failure still blocks the dependent automatic act; historical attribution, present eligibility, observer trust and performance assessment are distinct questions. These checks implement APP's qualified-action discipline rather than defining every use of the term promise in Promise Theory.
+
 ## Actors and exact action scope
 
 ### C2-01
@@ -42,6 +44,8 @@ The action MUST identify its subjects, relevant resources, parameters, limits, a
 
 Before issuance, the promiser MUST have evidence meeting the applicable policy for both capability and current authority to make that conditional commitment. Capability and authority MUST be checked separately. Possessing a credential or permission does not establish ability; possessing an ability, tool, or endpoint does not establish permission.
 
+An authenticated assertion that fails this guard does not become a conforming APP issuance merely because its author signed it. Conversely, rejecting it for automatic use does not establish that the author never made that declaration. Verification and rejection preserve the distinction between provenance and qualification.
+
 ### C2-09
 
 Capability evidence MUST cover the action and material capacity under the stated conditions. A signature, schema-valid reference, advertising claim, or evidence about another action MUST NOT automatically establish competence or capacity. A capability advertisement alone MUST NOT be interpreted as commitment authority or promise issuance. The principal/counterparty policies determine acceptable evidence strength; unresolved required qualification prevents the dependent automatic act.
@@ -75,6 +79,8 @@ Authenticated issuance of a `promise` record issues its `own_promise`; issuance 
 ### C2-16
 
 An offer's issued promises remain subject to their stated agreement, selection, principal-review, and other qualifications. Issuance MUST NOT imply that those future conditions already hold. An offer cannot bind the counterparty's conduct, and accepting it cannot broaden the issuer's promised action or remove its conditions without fresh issuance/adoption of changed terms.
+
+The issued conditional promise exists before its performance conditions are satisfied. An unsatisfied or unresolved future condition is not, by itself, evidence of failed performance. Unknown required meaning, revoked authority, withdrawal, principal refusal and observed nonperformance retain their separate interpretation under their governing contracts and claim semantics; they are not a single generic promise-failure state.
 
 ### C2-17
 

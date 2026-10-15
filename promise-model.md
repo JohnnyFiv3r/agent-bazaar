@@ -2,9 +2,28 @@
 
 **Draft 0.4 · proposal for refinement under user decision 4**
 
-A **promise** is an attributable, qualified action by an agent: the agent has the capability and authority required to perform the action within its stated conditions and limits. An **offer is a promise** whose performance is conditional on the stated agreement and policy requirements. Neither term implies guaranteed future success.
+An **APP-qualified promise** is an agent's attributable promise of its own action, made within the capability and authority required by its stated conditions and limits. APP requires evidence supporting those qualifications before conforming issuance and rechecks it where material to adoption, finalization and reliance. An **offer is a promise** whose performance is conditional on the stated agreement and policy requirements. Neither term guarantees future success.
 
-The definition is the engineering meaning of this protocol, informed by Promise Theory's autonomous agents, self-authored behavior, provide/receive polarity, conditions, scope and assessment. It is not presented as a verbatim definition from the book.
+This engineering model draws on Promise Theory's autonomous agents, self-authored behavior, provide/receive polarity, conditions, scope and assessment. It is not a verbatim definition from the book. Capability is a substantive requirement, not merely possession of a signed capability claim. An authenticated but unqualified assertion remains attributable evidence of what its author declared; it is not admissible evidence for the automatic APP act whose guard it fails. These distinctions do not relax any [C2 qualification requirement](contracts/02-qualified-actions.md#qualification-and-authority-guards). The [Promise Theory correspondence](docs/review/promise-theory-correspondence.md) distinguishes the source concepts from APP's operational choices.
+
+## Issuance, reliance and assessment
+
+Keep the historical declaration, APP qualification, current eligibility to rely, observer trust and assessment of actual behavior separate. A signature establishes authorship and exact content, not the truth of capability claims. Qualification evidence supports a policy decision, not certainty about future behavior. An observer's trust may inform its decisions under the applicable policies, but cannot replace required guards, rewrite the promise or erase previously adopted terms.
+
+A conditional promise exists when its author issues it. The condition qualifies the promised behavior; mutual agreement or satisfaction of a later prerequisite does not retroactively create that issuance. A description awaiting its named actor's `issue_on_adoption` is different: the candidate author has not issued that actor's promise.
+
+| Observation | APP interpretation |
+|---|---|
+| A known future condition is false or its satisfaction is unknown | Interpret the condition under its named semantics; do not infer that the conditional behavior is due or that its absence breaks the promise. |
+| Required action or condition meaning is unknown | Block the dependent automatic act; preserve any attributable declaration without inventing its meaning. |
+| Authority is revoked or capability evidence no longer qualifies | Reassess current eligibility under the applicable policy; preserve the original issuance and evidence used at that time. |
+| An issuer withdraws a record | Apply that withdrawal to its exact target and policy-defined scope; do not erase its history or silently cancel other commitments. |
+| A principal validly refuses an accepted offer | Apply C5's protected refusal to reliance on that accepted object; do not rewrite the original offer. |
+| Observed performance appears to miss the promised behavior | Assess the original action and conditions under understood claim semantics, with attributable evidence and an identified assessor. |
+
+These observations are not synonyms for a universal `broken` state. APP preserves their different subjects and evidence; domain assessment and native performance mechanisms remain outside the core. A provider claim, a counterparty assessment and an independent observer's assessment need not establish the same fact.
+
+Autonomy has three relevant boundaries. An agent authors only its own promises. Its principal may authorize reliance on a resource-selection or ordering authority within an explicit adopted scope. Neither that authority nor the coordinator can force the agent's actual performance. Accepting scoped allocation rules is compatible with self-authorship; it does not grant a universal authority over the promiser.
 
 ## Shared shape
 
@@ -22,7 +41,7 @@ The definition is the engineering meaning of this protocol, informed by Promise 
 | Qualifications | Explicit conditions, limits and dependencies; each check has a named meaning and evidence requirement |
 | Validity | The applicable policy-defined validity rule; no mandatory universal expiry |
 | Disclosure | Who may learn or redistribute this record, under the publication and negotiated privacy rules |
-| Portable proof | Existing proof mechanism authenticating issuer and exact content; it does not independently establish capability |
+| Portable proof | Existing proof mechanism authenticating issuer and exact content; it does not independently establish qualification, trust or fulfillment |
 
 These elements are represented by the generic promise/action definitions in the [schema](schemas/contract.schema.json). The schema establishes structural compatibility; action-specific semantics establish what the parameters mean. An implementation that does not understand a required action definition MUST NOT automatically issue or adopt it.
 
