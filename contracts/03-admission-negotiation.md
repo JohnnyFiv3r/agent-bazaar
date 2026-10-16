@@ -1,6 +1,6 @@
 # C3 — Admission and negotiation
 
-**APP 0.4-draft · normative · MIT**
+**APP 0.4 · normative · MIT**
 
 This contract governs how a recipient admits work while allowing iterative offers. It applies to the [semantic records](../schemas/contract.schema.json), [interaction envelope](../schemas/interaction.schema.json) and [admission declaration](../schemas/admission-policy.schema.json). Numbers, validity and replenishment are policy choices, not protocol defaults.
 

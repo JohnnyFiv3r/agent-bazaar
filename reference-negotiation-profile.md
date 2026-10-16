@@ -1,6 +1,6 @@
 # Reference negotiation note: policy-controlled admission
 
-**Draft 0.4.** This note illustrates the admission contract. It does not mandate a permit format, a numerical quota, a fixed negotiation duration or forced closure.
+**APP 0.4.** This note illustrates the admission contract. It does not mandate a permit format, a numerical quota, a fixed negotiation duration or forced closure.
 
 Each recipient's publication references an understood admission policy. That policy declares eligible participants/topics, admitted message kinds, finite message/byte/work budgets, concurrency/capacity limits, accounting authority and validity. It can admit a bounded first offer, require an invitation, or close contact entirely. Receiving a published intent does not independently authorize a response.
 

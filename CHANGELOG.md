@@ -1,5 +1,11 @@
 # Changelog
 
+## APP 0.4 documentation
+
+- Present the current specification as APP 0.4, with early-release status in the README.
+- Add a reviewer reading path, agreement example, shared glossary and descriptive contract headings.
+- Preserve normative requirements, existing wire identifiers and historical release records.
+
 ## APP 0.4 Reference Draft — `app-v0.4-draft.1`
 
 Release date: October 9, 2026. Includes RP1 0.1-draft and the MIT Python reference runtime 0.1.0.

@@ -1,6 +1,6 @@
 # C5 — Principal notice, refusal and accepted-offer status
 
-**APP 0.4-draft · normative interface contract**
+**APP 0.4 · normative interface contract**
 
 This contract governs interpretation of the immutable `accepted_offer` produced by [C4](04-formation.md). It uses [publication/policy](01-publication-policy.md), [qualified authority](02-qualified-actions.md) and [portable A2A evidence](06-a2a-evidence.md). The [core contract](../contract.md) and [record schemas](../schemas/contract.schema.json) define the common vocabulary.
 

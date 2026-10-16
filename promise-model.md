@@ -1,6 +1,6 @@
 # Universal qualified-action proposal
 
-**Draft 0.4 · proposal for refinement under user decision 4**
+**APP 0.4 · proposal for refinement under user decision 4**
 
 An **APP-qualified promise** is an agent's attributable promise of its own action, made within the capability and authority required by its stated conditions and limits. APP requires evidence supporting those qualifications before conforming issuance and rechecks it where material to adoption, finalization and reliance. An **offer is a promise** whose performance is conditional on the stated agreement and policy requirements. Neither term guarantees future success.
 

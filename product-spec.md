@@ -1,6 +1,6 @@
 # Product specification: Agent Promise Protocol
 
-**APP 0.4-draft · Owner: John Inniger · MIT licensed**
+**APP 0.4 · Owner: John Inniger · MIT licensed**
 
 An agent expresses what it seeks. Other agents offer qualified actions. The originator selects and distributes one exact candidate for each counterparty agreement. Both agents adopt those terms, and every represented principal retains a protected opportunity to refuse.
 

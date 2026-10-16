@@ -1,6 +1,6 @@
 # Deployment, custody and scoped authority
 
-**APP 0.4-draft · deployment clarification · existing records and A2A binding**
+**APP 0.4 · deployment clarification · existing records and A2A binding**
 
 APP supports independently hosted participants. A seller exposes an A2A endpoint implementing the APP extension. A buyer can use an embedded APP participant or reach a delegated participant through one connector in an existing assistant. Optional discovery, intent routing and offer aggregation can sit around those participants. No APP-operated service, mandatory discovery provider, network-wide registry or common database is part of the core agreement contract.
 

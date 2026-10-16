@@ -1,6 +1,6 @@
 # Agent-governing contracts
 
-**APP 0.4-draft · normative · MIT**
+**APP 0.4 · normative · MIT**
 
 The default is **one bilateral agreement**. An agent emits intent or initiates with an offer. Each party promises only its own qualified actions. Both adopt the same exact candidate, the originator records finalization, and every represented principal retains a protected opportunity to refuse.
 

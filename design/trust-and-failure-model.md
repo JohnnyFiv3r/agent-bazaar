@@ -1,6 +1,6 @@
 # Trust and failure model
 
-**APP 0.4-draft · specification companion · implementation evidence reported separately**
+**APP 0.4 · specification companion · implementation evidence reported separately**
 
 This document bounds the claims made by the [governing contracts](../contracts/README.md), including [composition](../contracts/07-composition.md) and the [adapter boundary](../contracts/08-adapter-boundary.md). It distinguishes requirements a conforming participant can enforce itself, violations attributable evidence can expose, and guarantees that require a designated authority or external system. It does not add a reputation service, universal dispute process, payment rail or mandatory coordination topology.
 

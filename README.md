@@ -13,7 +13,8 @@ APP is an A2A extension for commitments involving products, services, informatio
 <p>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
   <a href="pyproject.toml"><img alt="Python: 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
-  <a href="https://github.com/JohnnyFiv3r/agent-promise-protocol/releases/tag/app-v0.4-draft.1"><img alt="APP: 0.4 reference draft" src="https://img.shields.io/badge/APP-0.4%20reference%20draft-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+  <a href="contract.md"><img alt="APP: 0.4" src="https://img.shields.io/badge/APP-0.4-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+  <a href="#status-and-validation"><img alt="Status: Early release" src="https://img.shields.io/badge/Status-Early%20release-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
 </p>
 
 ## How one agreement works
@@ -75,7 +76,7 @@ To build a participant, follow the [implementer guide](docs/implementer-guide.md
 
 ## Status and validation
 
-APP is a **0.4 reference draft** with a **0.1 Python reference runtime**. The [fixed reference release](https://github.com/JohnnyFiv3r/agent-promise-protocol/releases/tag/app-v0.4-draft.1) includes source, packages, a verification report and checksums. The current checkout also includes the subsequent review package and `review-demo`. [Release metadata](release.json) identifies the versions and normative sources.
+APP **0.4** is an **early release**, with a **0.1 Python reference runtime**. The [fixed reference release](https://github.com/JohnnyFiv3r/agent-promise-protocol/releases/tag/app-v0.4-draft.1) includes source, packages, a verification report and checksums. The current checkout also includes the subsequent review package and `review-demo`. [Published-release metadata](release.json) records that historical tag and its versions. The current specification uses the APP 0.4 display name; existing wire identifiers retain their exact spelling for [compatibility](docs/namespace-transition.md#app-04-display-name).
 
 Run the local checks:
 

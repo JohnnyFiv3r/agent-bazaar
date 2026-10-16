@@ -1,6 +1,6 @@
 # Protected handoff and downstream evidence
 
-**APP 0.4-draft · integration guide · October 9, 2026 namespace revision**
+**APP 0.4 · integration guide · October 9, 2026 namespace revision**
 
 This guide carries forward the October 8 ABP boundary under the distinct [APP namespace](docs/namespace-transition.md).
 

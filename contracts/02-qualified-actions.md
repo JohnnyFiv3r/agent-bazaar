@@ -1,6 +1,6 @@
 # C2 — Qualified actions, promises, and adoption
 
-**Normative contract · APP 0.4-draft**
+**Normative contract · APP 0.4**
 
 This contract governs the meaning and authorship of an agent's promises. It implements the controlling [decisions](../decisions-v0.2.md) and refines the [promise model](../promise-model.md). Names such as `own_promise` and `promise_bindings` refer to the [record schema](../schemas/contract.schema.json). The [publication contract](01-publication-policy.md) governs permission and disclosure.
 

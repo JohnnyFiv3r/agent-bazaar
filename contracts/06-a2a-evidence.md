@@ -1,6 +1,6 @@
 # C6 — A2A invocation and portable evidence
 
-**APP 0.4-draft.** This contract specifies how an agent invokes APP through A2A and how another agent verifies the resulting evidence. The [core contract](../contract.md) determines which semantic transition is permitted. This binding neither creates a transport nor changes an A2A task state.
+**APP 0.4.** This contract specifies how an agent invokes APP through A2A and how another agent verifies the resulting evidence. The [core contract](../contract.md) determines which semantic transition is permitted. This binding neither creates a transport nor changes an A2A task state.
 
 <!-- reader-guide:start -->
 ## Reading this contract

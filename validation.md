@@ -4,7 +4,7 @@
 
 The repository now has executable implementation tests in addition to its document-authoring checker. These evidence categories must remain separate. A successful structural check, signature verification, local policy decision, controlled behavioral test or fake adapter outcome does not establish the next category automatically.
 
-The historical ABP contract/profile/schema baseline is `f4a01e2c8c1ee6bb72cc6793933afbcedf91572c`. The current APP draft adds [deployment and ownership clarifications](deployment-model.md) and a distinct [APP namespace](docs/namespace-transition.md), preserving the underlying commitment and RP1 authority guarantees. The October 8 results below describe ABP sources; current APP run results must identify their actual source state and cannot be inferred from those earlier runs.
+The historical ABP contract/profile/schema baseline is `f4a01e2c8c1ee6bb72cc6793933afbcedf91572c`. The current APP specification adds [deployment and ownership clarifications](deployment-model.md) and a distinct [APP namespace](docs/namespace-transition.md), preserving the underlying commitment and RP1 authority guarantees. The October 8 results below describe ABP sources; current APP run results must identify their actual source state and cannot be inferred from those earlier runs.
 
 ## Published release evidence
 

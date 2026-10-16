@@ -1,12 +1,12 @@
 # Agent Promise Protocol A2A interaction contract
 
-**APP 0.4-draft · October 9, 2026 namespace revision · [MIT](LICENSE)**
+**APP 0.4 · October 9, 2026 namespace revision · [MIT](LICENSE)**
 
 The underlying contract was authored as ABP on October 8. The current [APP namespace](docs/namespace-transition.md) preserves those commitment semantics with distinct protocol identifiers.
 
 `MUST`, `MUST NOT` and `SHOULD` state requirements for a conforming participant. Each participant enforces them under its own authority. They do not confer power over another autonomous agent.
 
-The [eight governing contracts](contracts/README.md) supply the operational requirements for this common model: authorized actors, transition guards, durable effects, duplicates and failures. [Draft 0.4 decisions](decisions-v0.4.md) record the lifecycle boundary, universal agreement model and reference-profile choices. Conformance requires these contracts as well as the schema; a successful schema check alone cannot establish it.
+The [eight governing contracts](contracts/README.md) supply the operational requirements for this common model: authorized actors, transition guards, durable effects, duplicates and failures. [APP 0.4 decisions](decisions-v0.4.md) record the lifecycle boundary, universal agreement model and reference-profile choices. Conformance requires these contracts as well as the schema; a successful schema check alone cannot establish it.
 
 <!-- reader-guide:start -->
 ## Reading the core model

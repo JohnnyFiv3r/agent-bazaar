@@ -1,6 +1,6 @@
 # One capability, one agreement
 
-**APP 0.4-draft / RP1 · bilateral integration walkthrough.**
+**APP 0.4 / RP1 · bilateral integration walkthrough.**
 
 The normal interaction is: express an outcome, receive qualified offers, select exact terms, adopt the same candidate, and honor each principal's protected refusal period. This guide describes that application flow. The [implementer guide](implementer-guide.md) gives the reading order and runnable commands for reference runtime **0.1.0**; the [runtime guide](runtime.md) documents its actual Python interfaces and controlled-deployment limits.
 
