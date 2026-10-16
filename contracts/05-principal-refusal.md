@@ -10,6 +10,16 @@ The protected positive refusal period is a deliberate APP governance requirement
 
 The selected refusal/status authority is scoped to the accepted object and its adopted policies; it need not be an APP-wide service or the custodian of every participant's journal. Independent ingress, hosting or replicas MUST preserve the profile's logical admission order and recovery guarantees. A participant's local copy, missing reply or elapsed local timer MUST NOT replace authenticated current authority evidence. A hosted assistant or connector MUST preserve the required principal notice/refusal and outcome-recovery paths across chat-session termination; ordinary negotiation authority cannot waive them. See the [deployment model](../deployment-model.md).
 
+<!-- reader-guide:start -->
+## Reading this contract
+
+**How does a principal retain the opportunity to refuse?**
+
+The adopted terms name each principal's notice rules, positive review period and refusal authority. Qualifying notice and authoritative time establish when that period runs. Missing evidence leaves clearance unresolved. Clearance permits the next eligibility check; it does not supply a human signature or downstream action authority.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
+
 ## C5.1 Adopted rights and authorized actors
 
 The candidate MUST specify exactly one refusal-window descriptor for each distinct authenticated principal represented by its two agents. Identity is determined by the selected trust mechanism, not by counting distinct JSON objects. If both agents represent the same principal, that principal has one effective descriptor. Conflicting applicable delegations or refusal rules MUST be resolved through the principal's authorized policy mechanism before adoption; an agent cannot select whichever rule is shorter.

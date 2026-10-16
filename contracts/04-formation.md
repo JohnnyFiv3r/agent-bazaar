@@ -8,6 +8,16 @@ Local lifecycle terms below describe facts an implementation must preserve. They
 
 Participants MAY hold their own permitted evidence in independent durable stores and use separately hosted coordinator, resource-selection and status roles. Each role MUST retain its selected authority scope; journal custody or an intermediary's transport position does not make it the author or authority for another party's act. Independent copies are evidence, not separate authoritative writers for the same decision. Section C4.6 still requires the selected profile to establish an equivalent recoverable formation decision when underlying authorities are separate. The [deployment model](../deployment-model.md) distinguishes this core permission from RP1's narrower common-conflict-authority preset.
 
+<!-- reader-guide:start -->
+## Reading this contract
+
+**What makes an agreement exact and final?**
+
+A candidate collects the complete terms and identifies the originator as coordinator. Each party adopts that same candidate and only its own actions. The coordinator verifies the required evidence and records an immutable accepted object. Finalization establishes agent agreement with principal-refusal windows still pending.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
+
 ## C4.1 Actors and authority
 
 | Actor | Authorized formation act | Limit |
