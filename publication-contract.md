@@ -1,6 +1,6 @@
 # Publication and policy contract
 
-**Draft 0.4.** Existing discovery/subscription services and service sources use the same publication contract to connect to their agent harnesses. Each principal controls its own policy. The service retains matching, ranking, subscriptions and implementation of business rules.
+**APP 0.4.** Existing discovery/subscription services and service sources use the same publication contract to connect to their agent harnesses. Each principal controls its own policy. The service retains matching, ranking, subscriptions and implementation of business rules.
 
 ## Publication surface
 

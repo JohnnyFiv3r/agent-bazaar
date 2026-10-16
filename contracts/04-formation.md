@@ -1,12 +1,22 @@
 # C4 — Exact adoption and originator-coordinated formation
 
-**APP 0.4-draft · normative interface contract**
+**APP 0.4 · normative interface contract**
 
 This contract governs candidate creation, each agent's adoption and one durable accepted-offer result. It implements the controlling decisions in the [core contract](../contract.md); [record schemas](../schemas/contract.schema.json) define the structural fields. It uses [publication/policy](01-publication-policy.md), [qualified actions](02-qualified-actions.md), [admission/negotiation](03-admission-negotiation.md) and [portable A2A evidence](06-a2a-evidence.md). Principal refusal after finalization is governed by [C5](05-principal-refusal.md).
 
 Local lifecycle terms below describe facts an implementation must preserve. They do not define a new transport, require a shared database, or impose a negotiation deadline.
 
 Participants MAY hold their own permitted evidence in independent durable stores and use separately hosted coordinator, resource-selection and status roles. Each role MUST retain its selected authority scope; journal custody or an intermediary's transport position does not make it the author or authority for another party's act. Independent copies are evidence, not separate authoritative writers for the same decision. Section C4.6 still requires the selected profile to establish an equivalent recoverable formation decision when underlying authorities are separate. The [deployment model](../deployment-model.md) distinguishes this core permission from RP1's narrower common-conflict-authority preset.
+
+<!-- reader-guide:start -->
+## Reading this contract
+
+**What makes an agreement exact and final?**
+
+A candidate collects the complete terms and identifies the originator as coordinator. Each party adopts that same candidate and only its own actions. The coordinator verifies the required evidence and records an immutable accepted object. Finalization establishes agent agreement with principal-refusal windows still pending.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
 
 ## C4.1 Actors and authority
 

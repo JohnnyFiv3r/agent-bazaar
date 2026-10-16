@@ -1,12 +1,33 @@
 # Agent Promise Protocol A2A interaction contract
 
-**APP 0.4-draft · October 9, 2026 namespace revision · [MIT](LICENSE)**
+**APP 0.4 · October 9, 2026 namespace revision · [MIT](LICENSE)**
 
 The underlying contract was authored as ABP on October 8. The current [APP namespace](docs/namespace-transition.md) preserves those commitment semantics with distinct protocol identifiers.
 
 `MUST`, `MUST NOT` and `SHOULD` state requirements for a conforming participant. Each participant enforces them under its own authority. They do not confer power over another autonomous agent.
 
-The [eight governing contracts](contracts/README.md) supply the operational requirements for this common model: authorized actors, transition guards, durable effects, duplicates and failures. [Draft 0.4 decisions](decisions-v0.4.md) record the lifecycle boundary, universal agreement model and reference-profile choices. Conformance requires these contracts as well as the schema; a successful schema check alone cannot establish it.
+The [eight governing contracts](contracts/README.md) supply the operational requirements for this common model: authorized actors, transition guards, durable effects, duplicates and failures. [APP 0.4 decisions](decisions-v0.4.md) record the lifecycle boundary, universal agreement model and reference-profile choices. Conformance requires these contracts as well as the schema; a successful schema check alone cannot establish it.
+
+<!-- reader-guide:start -->
+## Reading the core model
+
+This section is informative. The numbered sections that follow define the shared model; [C1–C8](contracts/README.md) supply its operational requirements. Begin with sections 2, 4 and 6–9 for intent, offers and agreement. Sections 11–13 describe optional composition, handoff and A2A carriage.
+
+| Term | Meaning in this protocol |
+|---|---|
+| Principal | The person or organization whose delegated authority the agent uses. |
+| Intent | A declaration of what an agent seeks. Its `emission_promise` concerns declaring or seeking that outcome. |
+| Qualified promise | An attributable promise of the agent's own action, supported by the capability and authority required for its stated conditions and stage. |
+| Offer | A record issuing the author's conditional `own_promises`, possibly accompanied by requests for the counterpart's actions. |
+| Candidate | One immutable bundle of complete terms and exact action bindings for a bilateral agreement. Preparing it does not issue another actor's promise. |
+| Adoption | An agent's authenticated assent to the complete candidate, confirming or issuing its own actions as their bindings specify. |
+| Coordinator | The authenticated author of the negotiation's originating record, responsible for recording finalization. |
+| Accepted object | The durable record of exact agent agreement, initially subject to pending principal-refusal windows. |
+| Principal clearance | Evidence that the protected refusal periods have closed without a qualifying refusal. Downstream authorization remains a separate check. |
+| Profile | An understood selection of concrete mechanisms for the protocol's required guarantees. RP1 is the reference profile. |
+
+For example, a requester emits an intent to find a research provider. A provider issues a conditional offer to produce a report. The candidate binds that exact promise and any requester actions to complete terms. Both agents adopt it; the coordinator records agreement; principal-refusal rules then determine clearance. None of those records establishes that the report was delivered. The [worked example](docs/review/worked-example.md) follows the records and later evidence.
+<!-- reader-guide:end -->
 
 ## 1. Scope and controlling decisions
 

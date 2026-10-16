@@ -1,6 +1,6 @@
 # Sources and current decisions
 
-**Draft 0.4 · October 8, 2026.** The [earlier user decisions](decisions-v0.2.md), explicitly reconciled by [0.4 decisions](decisions-v0.4.md), control this revision. Earlier D1–D22 entries are preserved with [archived 0.1](archive/0.1/sources-and-decisions.md); they are not a second current decision register.
+**APP 0.4 · October 8, 2026.** The [earlier user decisions](decisions-v0.2.md), explicitly reconciled by [0.4 decisions](decisions-v0.4.md), control this revision. Earlier D1–D22 entries are preserved with [archived 0.1](archive/0.1/sources-and-decisions.md); they are not a second current decision register.
 
 ## Promise Theory reading
 
@@ -25,7 +25,7 @@ The October 15 [theory correspondence](docs/review/promise-theory-correspondence
 
 ## Native protocol sources and scope
 
-| Source | Use in draft 0.4 |
+| Source | Use in APP 0.4 |
 |---|---|
 | [A2A 1.0.0 specification](https://a2a-protocol.org/v1.0.0/specification/) and [extensions](https://a2a-protocol.org/latest/topics/extensions/) | Carrier/extension binding; native message, task and artifact meanings remain native. |
 | [RFC 8785](https://www.rfc-editor.org/rfc/rfc8785.html) | Canonicalization for APP content identity, excluding top-level proof references for the signed payload. Native proof bytes retain their own formats. |
@@ -41,7 +41,7 @@ The [research ledger](research/README.md), [earlier overlap audit](novel-angle-a
 
 ## Authoring selections still requiring refinement
 
-Draft 0.4 reconciles [eight governing interfaces](contracts/README.md) and records its [authoring choices](decisions-v0.4.md). These are original protocol engineering decisions, not requirements attributed to Promise Theory or copied from comparator implementations.
+APP 0.4 reconciles [eight governing interfaces](contracts/README.md) and records its [authoring choices](decisions-v0.4.md). These are original protocol engineering decisions, not requirements attributed to Promise Theory or copied from comparator implementations.
 
 The [universal action shape](promise-model.md) is a concrete proposal requested by the user. The [accepted-object contract](accepted-offer.md) makes notice/start/deadline/order semantics explicit without choosing a universal duration. [C6](contracts/06-a2a-evidence.md) selects the draft extension identifier and A2A binding. The [RP1 reference profile](profiles/reference-profile.md) selects concrete cryptographic, trust, policy, ordering and retrieval mechanisms for interoperability; the universal core permits other understood profiles. Unknown required profiles block automatic interpretation rather than silently selecting a substitute.
 

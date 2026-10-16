@@ -1,6 +1,16 @@
 # C6 — A2A invocation and portable evidence
 
-**APP 0.4-draft.** This contract specifies how an agent invokes APP through A2A and how another agent verifies the resulting evidence. The [core contract](../contract.md) determines which semantic transition is permitted. This binding neither creates a transport nor changes an A2A task state.
+**APP 0.4.** This contract specifies how an agent invokes APP through A2A and how another agent verifies the resulting evidence. The [core contract](../contract.md) determines which semantic transition is permitted. This binding neither creates a transport nor changes an A2A task state.
+
+<!-- reader-guide:start -->
+## Reading this contract
+
+**How do participants exchange and verify APP records?**
+
+APP uses A2A to submit records, request finalization and query status. Content references identify exact records; proofs establish their attribution. A processing receipt reports an operation outcome, while adoption and accepted-object records establish the corresponding agreement acts. Lost responses are recovered using stable identities.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
 
 ## 1. Version and extension identity
 
@@ -79,7 +89,9 @@ The body is authenticated as part of the envelope. A relay cannot alter the reci
 
 The three optional handoff purposes invoke [C8](08-adapter-boundary.md)'s side-effect-free preparation, guarded dispatch and read-only reconciliation. All retain one exact `handoff_request` subject and its semantic effect identity. They require `adapter-handoff` and `lifecycle-evidence`; they add no A2A RPC or task state. An applied interaction receipt proves processing of that phase request, not native execution or settlement. The referenced `prepared_handoff`, `handoff_receipt` and evidence supply their own attributable facts.
 
-Effective feature requirements are the union of the signed declaration and the features implied by the record kind, fields, purpose, resolved subject and evidence needed for the transition. In particular, a `transaction_plan`, `composition_binding` or candidate `composition` field requires `composition`; handoff records/purposes require `adapter-handoff` and `lifecycle-evidence`; a `lifecycle_evidence` record requires `lifecycle-evidence`. A baseline candidate's policy-filled `handoff_rules` alone does not require an adapter. Omitting an implied feature is invalid and MUST block application; a verifier MUST NOT silently amend signed bytes or treat the omission as permission to downgrade. Unknown or unsupported effective requirements block the dependent transition before adoption or reliance. A bounded failure receipt may identify the unsupported requirement without claiming to have interpreted or applied it.
+Effective feature requirements are the union of the signed declaration and the features implied by the record kind, fields, purpose, resolved subject and evidence needed for the transition. In particular, a `transaction_plan`, `composition_binding` or candidate `composition` field requires `composition`; handoff records/purposes require `adapter-handoff` and `lifecycle-evidence`; a `lifecycle_evidence` record requires `lifecycle-evidence`. A baseline candidate's policy-filled `handoff_rules` alone does not require an adapter. Omitting an implied feature is invalid and MUST block application; a verifier MUST NOT silently amend signed bytes or treat the omission as permission to downgrade.
+
+Unknown or unsupported effective requirements block the dependent transition before adoption or reliance. A bounded failure receipt may identify the unsupported requirement without claiming to have interpreted or applied it.
 
 Only the record selected by `subject_ref` is submitted for application. Other entries in `records` supply referenced terms, policies or evidence. Inclusion in the batch MUST NOT independently issue, adopt or apply those records. In particular, an embedded candidate does not issue its counterpart's promises, and evidence returned with a receipt does not admit an unsolicited counteroffer. A new counteroffer or clarification answer requires its own admitted `submit_record` request.
 

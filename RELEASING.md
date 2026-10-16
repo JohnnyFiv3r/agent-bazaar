@@ -1,12 +1,14 @@
 # Publishing a reference release
 
-APP is published as a reference draft with an independently implemented MIT runtime. The release does not certify a provider's deployment, independent interoperability or downstream native integrations.
+APP 0.4 has an independently implemented MIT reference runtime. Its current maturity is stated in the README. The release does not certify a provider's deployment, independent interoperability or downstream native integrations.
 
 ## Release identity and review
 
 `release.json` records the protocol, RP1 and runtime versions separately. Keep it consistent with `pyproject.toml`, the authoritative schemas, the extension identifiers and `CHANGELOG.md`. The first APP tag is `app-v0.4-draft.1`; its Python runtime is `0.1.0`. APP's [namespace transition](docs/namespace-transition.md) is explicit and does not migrate old signed records.
 
 Maintainers accept changes through an open pull request. Run the reference-verification workflow, address review findings and merge the reviewed revision. Use a new tag for each release; never move a published tag or replace assets to disguise different source bytes. Breaking semantics require new identifiers and participant understanding. Documentation or implementation corrections cannot change an already adopted agreement.
+
+Before packaging a new release, update `release.json` and `CHANGELOG.md` with its new tag, date, display title and maturity status through the reviewed pull request. Preserve exact wire identifiers unless an explicit protocol transition is intended. The existing descriptor records the historical `app-v0.4-draft.1` release.
 
 ## Verify the exact release commit
 
@@ -33,7 +35,7 @@ The report contains sanitized paths. Diagnostic command logs are retained in the
 
 ## Publish and verify
 
-Check that the merged commit's GitHub workflow is green and its reviews are addressed. Create and push an annotated tag from that exact commit, then create a GitHub prerelease titled **APP 0.4 Reference Draft** with the generated assets and concrete release notes. The prerelease label describes the protocol's reference-draft status.
+Check that the merged commit's GitHub workflow is green and its reviews are addressed. Create and push the new annotated tag from that exact commit, then create a GitHub release titled **APP 0.4** with the generated assets and concrete release notes. Use GitHub's prerelease flag while the README identifies APP as an early release; a documentation naming change alone does not publish a new artifact bundle.
 
 After publication, verify that the remote tag resolves to the intended commit, the release is public, every asset is present and downloaded asset hashes match `SHA256SUMS`. The GitHub source/tag URLs provide immutable retrieval; `main` remains a moving development branch. A GitHub release is sufficient for this distribution; publication to PyPI is a separate decision.
 

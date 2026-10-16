@@ -1,6 +1,6 @@
 # Contract map: one agreement, optional composition and lifecycle features
 
-**APP 0.4-draft · eight interface contracts**
+**APP 0.4 · eight interface contracts**
 
 The default path is one bilateral agreement governed by C1–C6. The same primitive supports monetary and noncommercial exchanges. C7 and C8 add explicitly negotiated capabilities; they are not required services or prerequisites for an ordinary agreement.
 

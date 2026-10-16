@@ -1,6 +1,6 @@
 # C5 — Principal notice, refusal and accepted-offer status
 
-**APP 0.4-draft · normative interface contract**
+**APP 0.4 · normative interface contract**
 
 This contract governs interpretation of the immutable `accepted_offer` produced by [C4](04-formation.md). It uses [publication/policy](01-publication-policy.md), [qualified authority](02-qualified-actions.md) and [portable A2A evidence](06-a2a-evidence.md). The [core contract](../contract.md) and [record schemas](../schemas/contract.schema.json) define the common vocabulary.
 
@@ -9,6 +9,16 @@ The accepted object records agent agreement. A separate current status establish
 The protected positive refusal period is a deliberate APP governance requirement for delegated agency. It is not derived as a theorem of Promise Theory and does not define promises generally. It remains mandatory in APP: a negotiating agent's autonomy does not authorize it to waive its principal's protection. A valid refusal changes permitted reliance on the accepted object while preserving the original promise records and agreement history.
 
 The selected refusal/status authority is scoped to the accepted object and its adopted policies; it need not be an APP-wide service or the custodian of every participant's journal. Independent ingress, hosting or replicas MUST preserve the profile's logical admission order and recovery guarantees. A participant's local copy, missing reply or elapsed local timer MUST NOT replace authenticated current authority evidence. A hosted assistant or connector MUST preserve the required principal notice/refusal and outcome-recovery paths across chat-session termination; ordinary negotiation authority cannot waive them. See the [deployment model](../deployment-model.md).
+
+<!-- reader-guide:start -->
+## Reading this contract
+
+**How does a principal retain the opportunity to refuse?**
+
+The adopted terms name each principal's notice rules, positive review period and refusal authority. Qualifying notice and authoritative time establish when that period runs. Missing evidence leaves clearance unresolved. Clearance permits the next eligibility check; it does not supply a human signature or downstream action authority.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
 
 ## C5.1 Adopted rights and authorized actors
 

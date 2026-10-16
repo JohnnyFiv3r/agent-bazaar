@@ -1,6 +1,6 @@
 # Reconciled lifecycle decisions
 
-**APP 0.4-draft · October 9, 2026 namespace revision · original decisions October 8, 2026.** This revision implements the requested lifecycle reconciliation and reference-profile design. The [0.3 snapshot](archive/0.3/README.md) preserves the previous formation-only boundary. The earlier [fifteen decisions](decisions-v0.2.md) remain controlling except for the explicit scope and test-planning changes below.
+**APP 0.4 · October 9, 2026 namespace revision · original decisions October 8, 2026.** This revision implements the requested lifecycle reconciliation and reference-profile design. The [0.3 snapshot](archive/0.3/README.md) preserves the previous formation-only boundary. The earlier [fifteen decisions](decisions-v0.2.md) remain controlling except for the explicit scope and test-planning changes below.
 
 This register preserves the specification decisions made under the Agent Bazaar (ABP) name at the October 8 freeze, using the current APP terminology. The October 9 [namespace transition](docs/namespace-transition.md) introduces distinct APP identifiers; it does not rewrite the historical baseline or signed records. Implementation followed the original baseline: [runtime 0.1.0](docs/runtime.md) and its [validation evidence](validation.md) now exist. That later work does not turn the original authoring decision or every proposed test into a completed interoperability result.
 

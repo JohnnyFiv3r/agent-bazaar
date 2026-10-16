@@ -1,8 +1,18 @@
 # C8 — Handoff, recovery protection and lifecycle evidence
 
-**APP 0.4-draft · normative · MIT**
+**APP 0.4 · normative · MIT**
 
 This contract defines the APP side of an adapter boundary. `adapter-handoff` (which requires `lifecycle-evidence`) enables its handoff operations; `lifecycle-evidence` alone enables attributed reporting. The default `bilateral` path needs neither an adapter nor a lifecycle reporting subsystem. Its mandatory principal recovery and policy-filled `handoff_rules` still prevent agent assent from being treated as native authority. It applies to the same universal agreements used for information, access, computation, services, goods, money and noncommercial exchanges. [C4](04-formation.md) governs agent agreement; [C5](05-principal-refusal.md) governs principal clearance; [C7](07-composition.md) governs component eligibility. Native systems independently authorize and perform their own acts.
+
+<!-- reader-guide:start -->
+## Reading this contract
+
+**What crosses the boundary into an external system?**
+
+When handoff is selected, APP binds an exact action to preparation, dispatch and recovery evidence. Native systems supply their own authorization and perform the action. Returned observations support only the claims their understood semantics establish. An accepted offer, cleared refusal window and successful payment are separate facts.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
 
 ## C8-01 — Boundary and actors
 

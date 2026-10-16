@@ -1,6 +1,6 @@
 # Proposed contract and adapter-boundary tests
 
-**APP 0.4-draft · 27 proposed assessment scenarios · partial executable coverage mapped separately**
+**APP 0.4 · 27 proposed assessment scenarios · partial executable coverage mapped separately**
 
 This document proposes the test regime for the [governing contracts](../contracts/README.md), including [composition](../contracts/07-composition.md), the [adapter boundary](../contracts/08-adapter-boundary.md) and the [reference profile](../profiles/reference-profile.md). It specifies scenarios and oracles, not an executable suite, and authorizes no live service, payment or settlement. The runtime was implemented against the frozen contract/profile baseline; its tests now exercise portions of this regime. Each assessment must identify the exact pinned revision. Worked scenarios may expose a contract disagreement; they do not silently decide the contract.
 

@@ -2,7 +2,7 @@
 
 <a id="rp1-v01"></a>
 
-**RP1 0.1-draft · APP 0.4-draft · normative profile.** The mechanisms below are requirements for an implementation claiming this profile. [Reference runtime 0.1.0](../docs/runtime.md) implements and tests a controlled subset, including real cryptography, OPA and mutual TLS. Its [validation evidence](../validation.md) does not establish every requirement, independent interoperability or a production deployment. Native execution and payment integrations remain outside that evidence.
+**RP1 0.1-draft · APP 0.4 · normative profile.** The mechanisms below are requirements for an implementation claiming this profile. [Reference runtime 0.1.0](../docs/runtime.md) implements and tests a controlled subset, including real cryptography, OPA and mutual TLS. Its [validation evidence](../validation.md) does not establish every requirement, independent interoperability or a production deployment. Native execution and payment integrations remain outside that evidence.
 
 RP1 binds the [core contracts](../contracts/README.md) to one interoperable set of mechanisms. Core semantics remain independent of this selection. `MUST`, `MUST NOT`, and `SHOULD` constrain an implementation claiming RP1. A value supplied by an authenticated principal policy is a required configuration input, not permission for an agent to invent a value.
 

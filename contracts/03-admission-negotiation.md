@@ -1,8 +1,18 @@
 # C3 — Admission and negotiation
 
-**APP 0.4-draft · normative · MIT**
+**APP 0.4 · normative · MIT**
 
 This contract governs how a recipient admits work while allowing iterative offers. It applies to the [semantic records](../schemas/contract.schema.json), [interaction envelope](../schemas/interaction.schema.json) and [admission declaration](../schemas/admission-policy.schema.json). Numbers, validity and replenishment are policy choices, not protocol defaults.
+
+<!-- reader-guide:start -->
+## Reading this contract
+
+**How can agents negotiate repeatedly within agreed limits?**
+
+Admission is permission to process an interaction. Policies set finite allowances for offers, revisions and other work. Exhausting an allowance restricts further processing without expiring the offer or resolving the negotiation. Refusal and status traffic retain their separately protected paths.
+
+*This orientation is informative. The numbered requirements below govern conformance.*
+<!-- reader-guide:end -->
 
 ## C3-01 — Actors and authority
 

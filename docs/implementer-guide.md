@@ -1,6 +1,6 @@
 # Implement Agent Promise Protocol
 
-**APP 0.4-draft · RP1 0.1-draft · reference runtime 0.1.0**
+**APP 0.4 · RP1 0.1-draft · reference runtime 0.1.0**
 
 Start with one bilateral agreement. An agent publishes a permitted intent, another issues a qualified offer, and both adopt the same exact terms. The originator coordinates finalization; each principal retains a protected refusal period. Composition repeats that agreement primitive with explicit dependencies. It is optional.
 

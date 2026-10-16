@@ -4,7 +4,7 @@
 
 The repository contains a Python reference implementation and executable structural, cryptographic, behavioral and local integration tests. Those tests provide evidence for their actual assertions under their stated trust assumptions. They do not establish complete RP1 deployment conformance, independent interoperability or builder adoption.
 
-This is published as an **APP 0.4 Reference Draft** with an MIT reference runtime. The release's verification report identifies the actual checked revision and artifacts; it is not a certificate for a provider's deployment. See [release metadata](release.json), [validation](validation.md) and the [implementer guide](docs/implementer-guide.md).
+APP **0.4** is accompanied by an MIT reference runtime. The release's verification report identifies the actual checked revision and artifacts; it is not a certificate for a provider's deployment. See [release metadata](release.json), [validation](validation.md) and the [implementer guide](docs/implementer-guide.md).
 
 The normative requirements remain the [core contract](contract.md), [C1–C8](contracts/README.md), [RP1](profiles/reference-profile.md) and the frozen schemas. The implementation does not redefine a requirement when a test is easier to satisfy. An unsupported required meaning must block the act.
 

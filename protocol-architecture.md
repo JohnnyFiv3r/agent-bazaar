@@ -1,6 +1,6 @@
 # Agent Promise Protocol architecture and A2A binding
 
-**Draft 0.4.** The default APP path forms one exact bilateral agreement and preserves each principal's protected refusal period. Optional features compose those agreements and govern the boundary to native actions and their evidence. Native execution, payment and settlement remain with the selected systems.
+**APP 0.4.** The default APP path forms one exact bilateral agreement and preserves each principal's protected refusal period. Optional features compose those agreements and govern the boundary to native actions and their evidence. Native execution, payment and settlement remain with the selected systems.
 
 ```mermaid
 flowchart TB

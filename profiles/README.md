@@ -1,6 +1,6 @@
 # Reference profiles
 
-The [RP1 reference profile](reference-profile.md) supplies the default path for **APP 0.4-draft**: one bilateral agreement with protected principal recovery. The application supplies its capability, principal permission, truthful limits and designated notice channel. A realm manifest fixes the mechanical choices for the harness; an application does not design cryptography, replay or ordering per transaction.
+The [RP1 reference profile](reference-profile.md) supplies the default path for **APP 0.4**: one bilateral agreement with protected principal recovery. The application supplies its capability, principal permission, truthful limits and designated notice channel. A realm manifest fixes the mechanical choices for the harness; an application does not design cryptography, replay or ordering per transaction.
 
 RP1 selects A2A 1.0 JSON-RPC over HTTPS, mutual TLS, a configured trust registry, JCS/SHA-256, JWS Ed25519, Open Policy Agent authorization, bounded evidence retrieval and one accepted authority ledger per resource conflict domain. Composition, adapter handoff and lifecycle evidence are separately negotiated optional features using the same universal schema. An ordinary agreement requires none of them.
 

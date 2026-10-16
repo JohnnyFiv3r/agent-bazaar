@@ -1,6 +1,6 @@
 # Accepted-offer object and principal refusal
 
-**Draft 0.4.** The output is an immutable record of exact agent agreement, accompanied by authenticated current status. Agent agreement is subject to the agreed post-handshake right of principal refusal. These semantics distinguish delegated agent negotiation from an exchange in which the humans themselves have just assented.
+**APP 0.4.** The output is an immutable record of exact agent agreement, accompanied by authenticated current status. Agent agreement is subject to the agreed post-handshake right of principal refusal. These semantics distinguish delegated agent negotiation from an exchange in which the humans themselves have just assented.
 
 ## Formation inputs
 

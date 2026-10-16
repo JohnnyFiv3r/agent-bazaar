@@ -2,33 +2,86 @@
   <img src="assets/brand/app-icon.png" width="112" alt="Agent Promise Protocol heart-shaped handshake logo">
 </p>
 
-# Agent Promise Protocol (APP)
+<h1 align="center">Agent Promise Protocol (APP)</h1>
 
-**Emit intent. Make qualified promises. Agree on exact terms.**
-
-Agent Promise Protocol lets agents express what they seek without turning that intent into an offer. Other agents can respond with actions they are capable and authorized to promise. The parties negotiate, adopt the same exact terms, and preserve a protected opportunity for every represented principal to refuse.
-
-Use APP when agents need to negotiate a commitment involving a product, service, information, access or an outcome. Either participant can initiate the exchange. Applications define what the actions mean; APP defines how participants qualify, negotiate and adopt their commitments.
-
-<p>
-  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
-  <a href="pyproject.toml"><img alt="Python: 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
-  <a href="https://github.com/JohnnyFiv3r/agent-promise-protocol/releases/tag/app-v0.4-draft.1"><img alt="APP: 0.4 reference draft" src="https://img.shields.io/badge/APP-0.4%20reference%20draft-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+<p align="center">
+  <strong>Emit intent. Make qualified promises. Agree on exact terms.</strong>
 </p>
 
-## From intent to agreement
+<p align="center">
+  An open protocol for agreements between autonomous agents acting on behalf of people and organizations.
+</p>
 
-- **Express intent.** Publish an outcome within the applicable consent and admission rules. Seeking an outcome does not promise to supply or acquire it, or issue another agent's promise.
-- **Make qualified offers.** Each agent issues only its own promises, subject to capability, current authority and understood conditions. An attributable declaration and an APP-qualified promise remain distinct; a signature alone does not prove a claim true.
-- **Negotiate exact terms.** Exchange and revise offers within the participants' declared policies and interaction budgets. Both agents adopt the same exact candidate for each bilateral agreement.
-- **Protect principal refusal.** Preserve the positive refusal period for every represented principal. Agent agreement, principal clearance and downstream authorization are separate decisions.
-- **Retain attributable evidence.** Keep declarations, later observations and assessments tied to their issuers. Agreement does not establish fulfillment or payment, and APP supplies no universal verdict on whether a promise was kept.
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+  <a href="pyproject.toml"><img alt="Python: 3.11+" src="https://img.shields.io/badge/Python-3.11%2B-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+  <a href="contract.md"><img alt="APP: 0.4" src="https://img.shields.io/badge/APP-0.4-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+  <a href="#status-and-validation"><img alt="Status: Early Release" src="https://img.shields.io/badge/Status-Early%20Release-FFD88A?style=flat-square&amp;labelColor=C94B00"></a>
+</p>
 
-For conceptual review, start with the **[Promise Theory review note](docs/review/promise-theory-correspondence.md)**. The [review package for Dr. Mark Burgess](docs/review/README.md) brings together the theoretical correspondence, APP's deliberate governance additions, seven questions and a worked research example.
+<p align="center">
+  <a href="#overview">Overview</a> ·
+  <a href="contract.md">Specification</a> ·
+  <a href="#getting-started">Get started</a> ·
+  <a href="contracts/README.md">Review guide</a> ·
+  <a href="https://github.com/JohnnyFiv3r/agent-promise-protocol/issues">Feedback</a>
+</p>
 
-## Try one agreement
+## Overview
 
-The repository includes an independently implemented Python reference runtime, schemas and executable checks. With Python 3.11 or newer and [uv](https://docs.astral.sh/uv/) installed, run the current checkout:
+Agent Promise Protocol lets an agent express what it seeks without turning that intent into an offer. Other agents respond with actions they are capable and authorized to promise. The parties negotiate, adopt the same exact terms, and preserve a protected opportunity for every represented principal to refuse.
+
+APP is an A2A extension for commitments involving products, services, information, access or outcomes. Either participant can initiate an exchange. Applications define what an action means; APP governs who can promise it and how the parties agree to its terms.
+
+## Why APP?
+
+An agent seeking a source-backed report needs to distinguish a request for research from a promise to buy it. A provider needs to offer its work under clear conditions, revise its terms, and know which agreement was adopted. The people or organizations represented by those agents need to retain their right to refuse.
+
+APP gives participants shared rules for those decisions:
+
+- **Intent without an implied offer.** Emission promises the scoped act of declaring or seeking. It does not commit the agent to supply, purchase or obtain the requested outcome.
+- **Promises with an accountable author.** An offer already issues its author's conditional promises. Requested counterpart actions remain requests until that actor issues its own promise. Capability and authority are checked separately.
+- **Negotiation within declared limits.** Policies control publication, permitted contact and finite interaction budgets. Revising an offer does not renew its allowance or silently change adopted terms.
+- **Exact agreement with principal protection.** Each party adopts the same immutable candidate. Agent agreement, principal clearance and downstream authorization remain separate decisions.
+
+## Protocol at a glance
+
+The baseline is one bilateral agreement. Optional features reuse that agreement model for composition and downstream evidence.
+
+| Area | What APP defines | Contracts |
+|---|---|---|
+| Publication and negotiation | Consent, audience, admission, bounded offers and revisions | [C1](contracts/01-publication-policy.md), [C3](contracts/03-admission-negotiation.md) |
+| Qualified actions | Intent, self-authored promises, counterpart requests, capability and authority | [C2](contracts/02-qualified-actions.md) |
+| Agreement and principal rights | Exact adoption, durable finalization, notice and protected refusal | [C4](contracts/04-formation.md), [C5](contracts/05-principal-refusal.md) |
+| Communication and proof | A2A operations, exact record identity, attribution and recovery | [C6](contracts/06-a2a-evidence.md) |
+| Optional composition and handoff | Dependencies between agreements, guarded handoff and interpretation of returned evidence | [C7](contracts/07-composition.md), [C8](contracts/08-adapter-boundary.md) |
+
+A research agreement follows a straightforward path:
+
+1. A requester emits an intent within its publication and contact policies.
+2. A provider offers its own qualified, conditional promise to produce the report.
+3. Both agents adopt one exact candidate, and the originator records finalization.
+4. The accepted object starts with principal-refusal windows pending; qualifying notice and the adopted rules govern clearance.
+5. Any downstream action requires its own authority. Later delivery reports and assessments remain separate from the original promise.
+
+The [core model](contract.md) defines the shared vocabulary. The [contract index](contracts/README.md) gives reviewers a reading path and the question each contract answers.
+
+## Where APP fits
+
+Existing discovery and subscription services connect participants under their publication policies. A2A carries their APP interactions. A provider's capability may involve an MCP endpoint, API, proprietary dataset, physical product or other service.
+
+Accepted terms can feed downstream AP2/UCP/ACP validation, execution and payment systems through the selected adapter boundary. Those systems supply their own authority and perform their native actions. No live integration with them has been qualified.
+
+APP requires no central operator, mandatory discovery provider or APP-owned ledger. Participants can retain permitted signed evidence or delegate custody. The [deployment model](deployment-model.md) separates that custody from coordination, resource and status authority. Applications supply shared action meanings, capability evidence, principal-approved permissions and usable notice/refusal channels.
+
+## Getting started
+
+- **Understand the model:** read the [specification and glossary](contract.md#reading-the-core-model), then the [governing contracts](contracts/README.md).
+- **Review the theory:** use the [Promise Theory review note](docs/review/promise-theory-correspondence.md), [worked research example](docs/review/worked-example.md) and [conceptual review questions](docs/review/README.md).
+- **Build a participant:** follow the [implementer guide](docs/implementer-guide.md), [RP1 reference profile](profiles/reference-profile.md) and [runtime guide](docs/runtime.md).
+- **Inspect the records:** explore [semantic schemas](schemas/contract.schema.json), [interaction envelopes](schemas/interaction.schema.json), [admission declarations](schemas/admission-policy.schema.json) and [examples](examples/README.md).
+
+With Python 3.11 or newer and [uv](https://docs.astral.sh/uv/), run the reference example:
 
 ```sh
 git clone https://github.com/JohnnyFiv3r/agent-promise-protocol.git
@@ -37,69 +90,31 @@ uv sync --locked --extra dev
 uv run --locked agent-promise-protocol review-demo
 ```
 
-The review demo follows one requester and one provider through a bilateral research agreement. It then records a provider inability report and a separate requester assessment while preserving the original promise. It writes a portable signed trace and a readable summary into a fresh temporary directory. Add `--directory PATH` to choose a fresh, empty output directory.
+The demo writes a signed research-agreement trace and readable summary to a fresh temporary directory. It then records provider inability and a separate requester assessment without rewriting the promise. Use `--directory PATH` to select a fresh, empty output directory. Run `uv run --locked agent-promise-protocol demo` for refusal, restart recovery, three-agent composition and fake-adapter scenarios.
 
-For the broader demonstration, including principal refusal, restart recovery, three-agent composition and guarded fake-adapter handoff:
+Both demos are controlled simulations. Signatures, content digests, schema checks and SQLite transactions are real; policies, capability evidence, time and peer identities are fixtures. The adapter is a deterministic fake. The demos make no network calls, real service requests, orders or payments.
 
-```sh
-uv run --locked agent-promise-protocol demo
-```
+## Status and validation
 
-The broader demo prints structured observations and writes durable SQLite ledgers into a fresh temporary directory. It also accepts `--directory PATH` to choose a fresh output directory.
+**APP 0.4 · Early Release · Python reference runtime 0.1**
 
-**Both demos are controlled simulations.** Ed25519 signatures, RFC 8785 digests, schema checks and SQLite transactions are real. Capability evidence, principal policies, clock, inbox/health observations and peer transport identities are controlled fixtures using `TestPolicy`. The broader demo's native adapter is a deterministic fake. Neither demo makes network calls, real service requests, orders or payments; neither demonstrates independently implemented agents or autonomous model reasoning.
+The current runtime uses one delegated authority realm and a shared SQLite ledger. Independent-participant runtime support remains [design work](design/independent-participant-slice.md). [Validation](validation.md) records executed checks and separates them from proposed scenarios. Passing reference tests does not establish full deployment [conformance](conformance.md), independent interoperability or autonomous model reasoning. Production integration requirements are listed in the [runtime limits](docs/runtime.md#current-limits).
 
-Start with the **[implementer guide](docs/implementer-guide.md)**, then the [runtime and integration guide](docs/runtime.md). [Validation](validation.md) records evidence categories and reproduction commands; [conformance](conformance.md) explains the remaining assessment scope. Passing this implementation's tests does not establish full RP1 deployment conformance, independent interoperability or ease of adoption by another builder.
+The [published reference bundle](https://github.com/JohnnyFiv3r/agent-promise-protocol/releases/tag/app-v0.4-draft.1) contains source, packages, verification evidence and checksums for its recorded commit. This checkout includes subsequent documentation and the review demo. Historical tags and [release metadata](release.json) retain their original identities; wire identifiers keep their exact spelling for [compatibility](docs/namespace-transition.md#app-04-display-name).
 
-## One agreement first
+## Contributing
 
-The bilateral primitive does not require a transaction plan or native adapter. Composition, adapter handoff and lifecycle evidence are additional declared features. Unknown required features or meanings block the dependent act.
+Feedback on the semantics, implementation and developer experience is welcome. Open an [issue](https://github.com/JohnnyFiv3r/agent-promise-protocol/issues) with the relevant contract clause or a reproducible example, and follow the [contribution guide](CONTRIBUTING.md) for changes.
 
-Applications supply understood action semantics, truthful capability and constraints, principal-approved permissions, and a usable principal notice/refusal channel. The package supplies protocol checks and integration boundaries; it cannot manufacture those application facts. The current authority arrangement is one explicitly delegated realm sharing one SQLite ledger. It does not provide federated consensus or fencing against a separate database copy.
-
-Keep **agent agreement**, **principal clearance**, and **downstream authorization** separate. A positive refusal-window status never fabricates native action authority or a human signature.
-
-## Hosting and ownership
-
-A buyer can use one connector to its delegated APP participant, or an embedded participant. Sellers expose independently hosted A2A APP endpoints. Discovery, intent routing and offer aggregation are optional application services. Each participant may retain its own permitted signed evidence; the core requires no APP-operated ledger or mandatory discovery provider.
-
-The [deployment model](deployment-model.md) distinguishes journal custody from scoped coordinator, resource and refusal/status authority. RP1 currently selects a common conflict authority, and runtime 0.1 uses a shared SQLite store. The [independent-participant slice](design/independent-participant-slice.md) is the remaining distributed-runtime work; separate-store portability tests do not claim it has already been implemented.
-
-## Choose a starting point
-
-| You want to… | Start here |
-|---|---|
-| Understand and critique the Promise Theory interpretation | [Review note](docs/review/promise-theory-correspondence.md) and [worked research example](docs/review/worked-example.md) |
-| Build an APP participant | [Implementer guide](docs/implementer-guide.md), [conceptual quick-start](docs/quickstart.md) and [runtime guide](docs/runtime.md) |
-| Read the governing contracts | [Eight contracts](contracts/README.md): C1–C6 cover bilateral formation and recovery, C7 composition, C8 the adapter boundary and evidence |
-| Inspect the model and decisions | [Core model](contract.md), [current decisions](decisions-v0.4.md), [architecture](protocol-architecture.md) and [trust/failure model](design/trust-and-failure-model.md) |
-| Implement the reference profile and harness boundary | [RP1 profile](profiles/reference-profile.md) and [application/harness design](profiles/harness-interface.md) |
-| Work with wire structures | [Semantic schemas](schemas/contract.schema.json), [interaction envelopes](schemas/interaction.schema.json) and [admission declaration](schemas/admission-policy.schema.json) |
-| Inspect examples and implementation | [Fictional examples](examples/README.md), [worked scenarios](examples/lifecycle-walkthroughs.md), [runtime source](src/agent_promise_protocol/) and [tests](tests/runtime/) |
-
-## Status and development
-
-APP is a **0.4 reference draft** with a **0.1 Python reference runtime**. Run the runtime and document checks from the checkout:
+Run the local checks:
 
 ```sh
 uv run --locked --extra dev python -m pytest tests/runtime -q -ra
 uv run --locked --extra dev python checks/validate.py
 ```
 
-Separate integration tests exercise actual TLS 1.3 mutual authentication and a local OPA 1.21.1 service. Installing the Python package does not install OPA; use the [validation guide](validation.md) for the required setup and evidence boundaries. See the [changelog](CHANGELOG.md) for changes.
+The [validation guide](validation.md) covers setup for mTLS and OPA integration checks. See the [changelog](CHANGELOG.md), [current decisions](decisions-v0.4.md) and [release process](RELEASING.md) for change history and compatibility requirements.
 
-The original ABP contract/profile baseline is preserved at `f4a01e2`. The current draft adds [deployment and ownership clarifications](deployment-model.md) and uses APP's distinct wire namespace. The underlying commitment and RP1 authority guarantees are preserved; old identifiers and signed records are not silently accepted as APP. Historical archives retain their original names and status. [P01–P27](tests/PROPOSED.md) remain proposed assessment scenarios, with partial coverage by executable tests. They are not a checklist in which every proposal has passed.
+## License
 
-## Reference release and compatibility
-
-The [APP 0.4 Reference Draft release](https://github.com/JohnnyFiv3r/agent-promise-protocol/releases/tag/app-v0.4-draft.1) fixes the reference draft, RP1 profile, schemas, examples and runtime source as one identifiable release. The current checkout also includes the subsequent conceptual review package and `review-demo`. [Release metadata](release.json) lists their distinct versions and normative sources. The release assets include the source bundle, wheel, source distribution, verification report, release manifest and SHA-256 checksums. The report names the exact tested source commit and package hashes.
-
-The extension and profile URIs are exact identifiers. Their `main` URLs do not make mutable page content authoritative: implementations pin the understood contract/schema revision. The [APP namespace transition](docs/namespace-transition.md) explicitly replaces the earlier ABP names without translating existing acts. Breaking semantic changes require new protocol/profile identifiers and explicit understanding by participants. A documentation correction or implementation repair must not reinterpret an already adopted agreement. Maintainers review changes through pull requests; [contribution](CONTRIBUTING.md) and [release](RELEASING.md) guidance explain that process.
-
-## Native boundary and current limits
-
-The runtime freezes a preparation, journals a stable dispatch attempt before invoking an enrolled adapter, and reconciles uncertain outcomes without automatically dispatching again. The provided adapter is a deterministic fake. No AP2, UCP, ACP, payment rail or live service integration has been qualified.
-
-Production authenticated time/NTS, qualifying HTTPS principal inbox operation, signed registry distribution and failover fencing remain integration work. `policy_defined` validity is unsupported. Some unusual object-key orderings cannot produce a matching OPA/JCS decision digest and fail closed. See the [runtime limits](docs/runtime.md#current-limits) and [policy implementation notes](policies/README.md).
-
-Original specification, schemas, runtime and examples are MIT licensed. Ordinary general-purpose dependencies are declared in [pyproject.toml](pyproject.toml) and pinned in [uv.lock](uv.lock). Related projects provide [research and inspiration](research/README.md); comparator implementation code and imported test suites are not used. See [contribution guidance](CONTRIBUTING.md). Historical snapshots preserve [0.3](archive/0.3/README.md), [0.1](archive/0.1/README.md), and [0.2 in Git history](https://github.com/JohnnyFiv3r/agent-promise-protocol/tree/0011b504b706970c54a780d700be3efe444d4898).
+The specification, schemas, reference runtime and examples are [MIT licensed](LICENSE). Dependencies are declared in [pyproject.toml](pyproject.toml) and pinned in [uv.lock](uv.lock). Related projects provide [research and inspiration](research/README.md); comparator implementation code and imported test suites are not used.
